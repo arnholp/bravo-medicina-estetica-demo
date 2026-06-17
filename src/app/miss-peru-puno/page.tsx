@@ -71,10 +71,10 @@ export default function MissPeruPunoPage() {
 
           <Reveal delay={0.08}>
             <div className="mx-auto w-full max-w-xl rounded-[2rem] border border-gold/30 bg-white/5 p-4 shadow-glow backdrop-blur">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-gold/20 bg-black">
+              <div className="relative aspect-video overflow-hidden rounded-[1.5rem] border border-gold/20 bg-black">
                 <Image
-                  src={siteConfig.missPeruLogo}
-                  alt="Logo Miss Perú Puno"
+                  src={siteConfig.missPeruHero}
+                  alt="Imagen de auspicio de Bravo Medicina Estética para Miss Perú Puno"
                   fill
                   priority
                   sizes="(min-width: 1024px) 42vw, 90vw"
@@ -151,10 +151,19 @@ export default function MissPeruPunoPage() {
 
           <Reveal delay={0.08}>
             <div className="grid gap-4 sm:grid-cols-2">
+              <div className="relative min-h-52 overflow-hidden rounded-3xl border border-linen bg-coffee sm:col-span-2">
+                <Image
+                  src={siteConfig.missPeruLogo}
+                  alt="Logo Miss Perú Puno"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 90vw"
+                  className="object-cover"
+                />
+              </div>
               {[
                 "Comunicación premium de marca",
                 "Cuidado facial y corporal con orientación",
-                "Seguimiento post tratamiento",
+                "Comunicación posterior a la evaluación",
                 "CTA directo para agendar evaluación"
               ].map((item) => (
                 <div key={item} className="rounded-3xl border border-linen bg-cream p-5 text-sm font-semibold text-coffee/75">

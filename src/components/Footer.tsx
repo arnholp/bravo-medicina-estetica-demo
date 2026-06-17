@@ -19,7 +19,7 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-6 max-w-xl text-sm leading-7 text-cream/70">
-            Demo no oficial de una experiencia digital para conversión, reserva, educación y seguimiento de pacientes.
+            Demo no oficial de una experiencia digital para conversión, reserva y educación de pacientes.
             La información es orientativa y no reemplaza una evaluación profesional.
           </p>
         </div>
@@ -27,7 +27,7 @@ export function Footer() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gold">Navegación</p>
           <div className="mt-4 grid gap-3">
-            {navItems.filter((item) => item.label !== "Admin").map((item) => (
+            {navItems.map((item) => (
               <Link key={item.href} href={item.href} className="text-sm text-cream/70 transition hover:text-white">
                 {item.label}
               </Link>

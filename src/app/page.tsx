@@ -4,7 +4,6 @@ import Link from "next/link";
 
 import { AppointmentForm } from "@/components/AppointmentForm";
 import { Hero } from "@/components/Hero";
-import { PatientFollowUpTimeline } from "@/components/PatientFollowUpTimeline";
 import { Quiz } from "@/components/Quiz";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -153,21 +152,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="seguimiento" className="section-pad bg-cream">
-        <div className="container-shell">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Seguimiento post tratamiento"
-              title="Una experiencia de cuidado después de la sesión"
-              description="La demo incluye un registro interno de pacientes y una línea visual de mensajes de seguimiento."
-            />
-          </Reveal>
-          <Reveal className="mt-10">
-            <PatientFollowUpTimeline />
-          </Reveal>
-        </div>
-      </section>
-
       <section className="section-pad bg-white">
         <div className="container-shell">
           <SectionHeading
@@ -187,13 +171,13 @@ export default function HomePage() {
       </section>
 
       <section className="bg-coffee py-12 text-cream">
-        <div className="container-shell grid gap-8 md:grid-cols-[180px_1fr_auto] md:items-center">
-          <div className="relative aspect-[4/3] w-full max-w-44 overflow-hidden rounded-3xl border border-gold/30 bg-black">
+        <div className="container-shell grid gap-8 md:grid-cols-[240px_1fr_auto] md:items-center">
+          <div className="relative aspect-video w-full max-w-60 overflow-hidden rounded-3xl border border-gold/30 bg-black">
             <Image
-              src={siteConfig.missPeruLogo}
-              alt="Logo Miss Perú Puno"
+              src={siteConfig.missPeruHero}
+              alt="Imagen de auspicio de Bravo Medicina Estética para Miss Perú Puno"
               fill
-              sizes="180px"
+              sizes="240px"
               className="object-cover"
             />
           </div>

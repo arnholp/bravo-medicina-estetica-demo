@@ -1,8 +1,8 @@
-# Bravo Medicina Estética Demo
+# Bravo Medicina Estetica Demo
 
-Aplicación web demo para **Bravo Medicina Estética**, una clínica estética en Juliaca, Perú. La experiencia está pensada como sistema de conversión, reserva, educación y seguimiento de pacientes.
+Aplicacion web demo para **Bravo Medicina Estetica**, una clinica estetica en Juliaca, Peru. La experiencia esta pensada como sistema de conversion, reserva y educacion de pacientes.
 
-> Demo no oficial. El contenido es orientativo y evita promesas médicas o resultados garantizados. Todo tratamiento debe pasar por evaluación profesional.
+> Demo no oficial. El contenido es orientativo y evita promesas medicas o resultados garantizados. Todo tratamiento debe pasar por evaluacion profesional.
 
 ## Stack
 
@@ -14,7 +14,7 @@ Aplicación web demo para **Bravo Medicina Estética**, una clínica estética e
 - React Hook Form + Zod
 - Lucide React
 
-## Instalación
+## Instalacion
 
 ```bash
 npm install
@@ -39,11 +39,10 @@ Crea `.env.local` tomando como base `.env.example`:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
-ADMIN_PASSWORD=bravo-demo-admin
 NEXT_PUBLIC_WHATSAPP_PHONE=51972657382
 ```
 
-`NEXT_PUBLIC_WHATSAPP_PHONE` es opcional. Si se deja vacío, la app usa el placeholder `51972657382`.
+`NEXT_PUBLIC_WHATSAPP_PHONE` es opcional. Si se deja vacio, la app usa el placeholder `51972657382`.
 
 ## Configurar Supabase
 
@@ -67,41 +66,12 @@ create table if not exists appointments (
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 
-create table if not exists patients (
-  id uuid primary key default gen_random_uuid(),
-  full_name text not null,
-  phone text not null,
-  treatment text not null,
-  session_date date not null,
-  recommended_product text not null,
-  next_session date not null,
-  status text not null default 'En seguimiento',
-  created_at timestamp with time zone default timezone('utc'::text, now()) not null
-);
-
 alter table appointments disable row level security;
-alter table patients disable row level security;
 ```
 
-Para producción, conviene activar RLS, usar políticas específicas o mover consultas administrativas a una clave de servicio protegida solo en servidor.
+Para produccion, conviene activar RLS y usar politicas especificas para inserciones desde el formulario.
 
-## Panel admin
-
-Ruta:
-
-```bash
-/admin
-```
-
-Usa la contraseña definida en:
-
-```env
-ADMIN_PASSWORD
-```
-
-El panel muestra citas y pacientes registrados. En pacientes incluye un botón para copiar un mensaje de seguimiento.
-
-## Cambiar el número de WhatsApp
+## Cambiar el numero de WhatsApp
 
 La forma recomendada es editar:
 
@@ -109,7 +79,7 @@ La forma recomendada es editar:
 NEXT_PUBLIC_WHATSAPP_PHONE=51972657382
 ```
 
-También puedes cambiar el valor base en:
+Tambien puedes cambiar el valor base en:
 
 ```bash
 src/constants/data.ts
@@ -123,31 +93,29 @@ phone: "51972657382"
 
 ## Editar tratamientos y contenido
 
-Todo el contenido demo está centralizado en:
+Todo el contenido demo esta centralizado en:
 
 ```bash
 src/constants/data.ts
 ```
 
-Desde ahí puedes editar:
+Desde ahi puedes editar:
 
 - Tratamientos
-- Categorías
+- Categorias
 - Testimonios simulados
-- Timeline de seguimiento
+- Pagina de Miss Peru Puno
 - Textos de confianza
-- Imágenes placeholder
+- Imagenes placeholder
 - Datos de contacto
 
 ## Estructura principal
 
 ```bash
 src/app
-src/app/admin
+src/app/miss-peru-puno
 src/app/tratamientos
 src/app/api/appointments
-src/app/api/patients
-src/app/api/admin
 src/components
 src/constants
 src/lib
@@ -159,16 +127,15 @@ public
 ```bash
 npm run dev
 npm run build
+npm run build:pages
 npm run lint
 npm run typecheck
 ```
 
-## Próximos pasos recomendados
+## Proximos pasos recomendados
 
-- Integrar n8n para automatizar seguimientos.
 - Automatizar WhatsApp con proveedor oficial o CRM compatible.
-- Agregar un CRM con historial de tratamientos y notas internas.
-- Crear seguimiento automático por día 1, 3, 7, 15 y 30.
-- Agregar autenticación real para el panel admin.
-- Activar RLS en Supabase con políticas seguras.
+- Agregar CRM si se requiere gestion interna de pacientes.
+- Integrar Vercel o Netlify si se necesita backend serverless para formularios.
+- Activar RLS en Supabase con politicas seguras.
 - Reemplazar testimonios simulados por testimonios autorizados.

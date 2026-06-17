@@ -54,9 +54,9 @@ export default function TreatmentsPage() {
 
           <Reveal delay={0.08}>
             <div className="rounded-[2rem] border border-gold/25 bg-white/8 p-4 shadow-glow backdrop-blur">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-white/10">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-white/10">
                 <Image
-                  src="/bravo-flyer-tratamientos.jpg"
+                  src="/tratamientos-hero.svg"
                   alt="Flyer de tratamientos Bravo Medicina Estética"
                   fill
                   priority

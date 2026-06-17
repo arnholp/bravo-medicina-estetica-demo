@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Tratamientos Bravo Medicina Estetica</title>
+  <desc id="desc">Imagen editorial premium con tres areas de tratamientos esteticos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FAF7F2"/>
+      <stop offset="56%" stop-color="#EADFD2"/>
+      <stop offset="100%" stop-color="#F7EFE5"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#E7D29D"/>
+      <stop offset="55%" stop-color="#C9A86A"/>
+      <stop offset="100%" stop-color="#9E7A35"/>
+    </linearGradient>
+    <linearGradient id="coffee" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#3A2B1F"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#2B2118" flood-opacity=".15"/>
+    </filter>
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#2B2118" flood-opacity=".12"/>
+    </filter>
+    <pattern id="grain" width="110" height="110" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="22" r="1.2" fill="#C9A86A" opacity=".18"/>
+      <circle cx="82" cy="44" r="1" fill="#5F6F52" opacity=".13"/>
+      <circle cx="52" cy="88" r="1.4" fill="#2B2118" opacity=".08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="900" rx="56" fill="url(#bg)"/>
+  <rect width="1200" height="900" rx="56" fill="url(#grain)" opacity=".65"/>
+
+  <circle cx="1020" cy="115" r="230" fill="#FFFFFF" opacity=".32"/>
+  <circle cx="135" cy="785" r="255" fill="#C9A86A" opacity=".16"/>
+  <circle cx="960" cy="770" r="170" fill="#5F6F52" opacity=".12"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="100" y="90" width="1000" height="720" rx="44" fill="#fffaf2" opacity=".82"/>
+    <rect x="100" y="90" width="1000" height="720" rx="44" fill="none" stroke="#FFFFFF" stroke-width="2" opacity=".78"/>
+  </g>
+
+  <g transform="translate(148 134)">
+    <rect x="0" y="0" width="904" height="88" rx="30" fill="#2B2118"/>
+    <circle cx="54" cy="44" r="30" fill="url(#gold)"/>
+    <path d="M39 54 C48 30 46 25 37 13 C58 27 62 43 54 66 C70 47 73 35 68 18 C89 36 87 58 68 75 C60 83 47 77 39 54Z" fill="#fff7e9" opacity=".86"/>
+    <text x="105" y="39" fill="#FAF7F2" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="4">BRAVO MEDICINA ESTETICA</text>
+    <text x="105" y="66" fill="#C9A86A" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="3">CATALOGO ORIENTATIVO DE TRATAMIENTOS</text>
+    <rect x="728" y="24" width="135" height="40" rx="20" fill="#5F6F52"/>
+    <text x="753" y="50" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">JULIACA</text>
+  </g>
+
+  <g transform="translate(148 268)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="282" height="410" rx="34" fill="#FFFFFF"/>
+    <rect x="24" y="24" width="234" height="156" rx="26" fill="#FAF7F2"/>
+    <circle cx="92" cy="100" r="42" fill="#EADFD2"/>
+    <path d="M132 60 C163 76 178 103 174 136 C155 128 139 113 132 60Z" fill="#C9A86A" opacity=".9"/>
+    <path d="M103 53 C132 91 127 132 93 158 C89 118 91 83 103 53Z" fill="#5F6F52" opacity=".75"/>
+    <rect x="32" y="210" width="148" height="14" rx="7" fill="#C9A86A"/>
+    <rect x="32" y="239" width="218" height="11" rx="6" fill="#2B2118" opacity=".18"/>
+    <rect x="32" y="263" width="186" height="11" rx="6" fill="#2B2118" opacity=".13"/>
+    <text x="32" y="324" fill="#2B2118" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">Faciales</text>
+    <text x="32" y="360" fill="#5F6F52" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750" letter-spacing="2">CUIDADO DE PIEL</text>
+  </g>
+
+  <g transform="translate(459 238)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="282" height="470" rx="36" fill="#2B2118"/>
+    <rect x="24" y="24" width="234" height="176" rx="28" fill="#3A2B1F"/>
+    <circle cx="142" cy="112" r="70" fill="url(#gold)" opacity=".94"/>
+    <circle cx="142" cy="112" r="46" fill="#2B2118" opacity=".22"/>
+    <path d="M118 140 C134 91 131 68 115 42 C157 77 164 115 137 167 C172 124 176 92 163 52 C205 98 196 154 147 190 C134 180 124 164 118 140Z" fill="#FAF7F2" opacity=".9"/>
+    <rect x="32" y="232" width="184" height="14" rx="7" fill="#C9A86A"/>
+    <rect x="32" y="263" width="218" height="11" rx="6" fill="#FFFFFF" opacity=".21"/>
+    <rect x="32" y="289" width="196" height="11" rx="6" fill="#FFFFFF" opacity=".16"/>
+    <rect x="32" y="315" width="151" height="11" rx="6" fill="#FFFFFF" opacity=".13"/>
+    <text x="32" y="391" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">Cirugias</text>
+    <text x="32" y="427" fill="#C9A86A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750" letter-spacing="2">EVALUACION</text>
+  </g>
+
+  <g transform="translate(770 268)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="282" height="410" rx="34" fill="#FFFFFF"/>
+    <rect x="24" y="24" width="234" height="156" rx="26" fill="#F3EEE6"/>
+    <path d="M76 128 C126 50 191 50 236 125 C199 150 126 157 76 128Z" fill="#5F6F52" opacity=".72"/>
+    <path d="M83 132 C121 101 184 99 228 131" fill="none" stroke="#C9A86A" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="88" cy="80" r="18" fill="#C9A86A" opacity=".84"/>
+    <circle cx="214" cy="78" r="18" fill="#C9A86A" opacity=".84"/>
+    <rect x="32" y="210" width="168" height="14" rx="7" fill="#C9A86A"/>
+    <rect x="32" y="239" width="218" height="11" rx="6" fill="#2B2118" opacity=".18"/>
+    <rect x="32" y="263" width="177" height="11" rx="6" fill="#2B2118" opacity=".13"/>
+    <text x="32" y="324" fill="#2B2118" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="850">Corporales</text>
+    <text x="32" y="360" fill="#5F6F52" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750" letter-spacing="2">ACOMPANAMIENTO</text>
+  </g>
+
+  <g transform="translate(244 732)">
+    <rect x="0" y="0" width="712" height="44" rx="22" fill="#FFFFFF" opacity=".76"/>
+    <circle cx="32" cy="22" r="10" fill="#5F6F52"/>
+    <circle cx="269" cy="22" r="10" fill="#C9A86A"/>
+    <circle cx="505" cy="22" r="10" fill="#2B2118"/>
+    <text x="54" y="28" fill="#2B2118" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750">Orientacion profesional</text>
+    <text x="291" y="28" fill="#2B2118" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750">Consulta personalizada</text>
+    <text x="527" y="28" fill="#2B2118" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="750">Cuidados generales</text>
+  </g>
+</svg>

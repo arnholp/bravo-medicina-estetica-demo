@@ -13,13 +13,19 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-white/60 bg-cream/90 backdrop-blur-xl">
-      <nav className="container-shell flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label="Ir al inicio">
-          <span className="relative h-12 w-12 overflow-hidden rounded-full border border-gold/40 bg-white shadow-soft">
-            <Image src={siteConfig.logo} alt="Logo Bravo Medicina Estética" fill sizes="48px" className="object-cover" />
+      <nav className="container-shell flex h-24 items-center justify-between">
+        <Link href="/" className="flex items-center gap-4" aria-label="Ir al inicio">
+          <span className="relative h-16 w-16 overflow-hidden rounded-full border border-gold/40 bg-white shadow-soft sm:h-20 sm:w-20">
+            <Image
+              src={siteConfig.logo}
+              alt="Logo Bravo Medicina Estética"
+              fill
+              sizes="(min-width: 640px) 80px, 64px"
+              className="object-cover"
+            />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-xl text-coffee">{siteConfig.name}</span>
+            <span className="block font-display text-2xl text-coffee sm:text-[1.7rem]">{siteConfig.name}</span>
             <span className="block text-xs font-medium uppercase tracking-[0.24em] text-coffee/50">
               Demo clínica
             </span>

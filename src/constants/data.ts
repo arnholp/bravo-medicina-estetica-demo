@@ -237,4 +237,307 @@ export const testimonials = [
   }
 ];
 
-export const treatmentOptions = treatments.map((treatment) => treatment.name);
+export type FlyerTreatment = {
+  name: string;
+  description: string;
+  potentialBenefits: string[];
+  generalCare: string[];
+  tag?: string;
+};
+
+export type FlyerTreatmentSection = {
+  id: "cirugias" | "faciales" | "corporales";
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  treatments: FlyerTreatment[];
+};
+
+export const flyerTreatmentSections: FlyerTreatmentSection[] = [
+  {
+    id: "cirugias",
+    eyebrow: "Cirugías estéticas",
+    title: "Procedimientos quirúrgicos estéticos",
+    description:
+      "Opciones que requieren evaluación médica, explicación de alcances, preparación previa y controles posteriores. La indicación depende de cada caso.",
+    image: "/tratamientos-cirugias.svg",
+    treatments: [
+      {
+        name: "Lipotransferencia / Lipoescultura",
+        description:
+          "Procedimiento orientado a remodelar zonas corporales y armonizar proporciones mediante una evaluación especializada.",
+        potentialBenefits: ["Plan corporal personalizado", "Orientación sobre zonas a tratar", "Acompañamiento pre y post procedimiento"],
+        generalCare: ["Evaluación previa obligatoria", "Seguir indicaciones post operatorias", "Usar prendas o fajas si el profesional lo indica"],
+        tag: "Quirúrgico"
+      },
+      {
+        name: "Rinoplastia",
+        description:
+          "Cirugía estética orientada a mejorar la armonía del perfil nasal y facial según valoración profesional.",
+        potentialBenefits: ["Armonía facial", "Plan según anatomía y expectativas", "Orientación quirúrgica personalizada"],
+        generalCare: ["Evitar golpes o presión", "Asistir a controles", "Seguir restricciones de actividad indicadas"],
+        tag: "Quirúrgico"
+      },
+      {
+        name: "Blefaroplastia",
+        description:
+          "Procedimiento quirúrgico para tratar exceso de piel en párpados cuando la evaluación lo considera adecuado.",
+        potentialBenefits: ["Apariencia más descansada", "Evaluación por zona periocular", "Plan con cuidados posteriores"],
+        generalCare: ["No manipular la zona", "Evitar esfuerzo inicial", "Cumplir controles y recomendaciones"],
+        tag: "Quirúrgico"
+      },
+      {
+        name: "Lipomarcación de rostro",
+        description:
+          "Alternativa estética orientada a definir y armonizar el contorno facial, sujeta a evaluación individual.",
+        potentialBenefits: ["Orientación de contorno facial", "Plan por zonas", "Acompañamiento posterior"],
+        generalCare: ["Evaluación facial previa", "Evitar expectativas absolutas", "Seguir indicaciones de recuperación"],
+        tag: "Rostro"
+      }
+    ]
+  },
+  {
+    id: "faciales",
+    eyebrow: "Tratamientos faciales",
+    title: "Cuidado, armonización y renovación facial",
+    description:
+      "Tratamientos orientados a piel, textura, luminosidad, acné, armonización y cuidado facial. La recomendación final se define en evaluación.",
+    image: "/tratamientos-faciales.svg",
+    treatments: [
+      {
+        name: "Botox facial",
+        description:
+          "Aplicación estética realizada por profesionales para suavizar líneas de expresión según zonas evaluadas.",
+        potentialBenefits: ["Apariencia facial más descansada", "Plan por zonas", "Acompañamiento posterior"],
+        generalCare: ["No masajear la zona", "Evitar ejercicio intenso el mismo día", "Seguir indicaciones profesionales"],
+        tag: "Inyectable"
+      },
+      {
+        name: "Ácido hialurónico",
+        description:
+          "Tratamiento de armonización o soporte de volumen facial según objetivos, anatomía y evaluación profesional.",
+        potentialBenefits: ["Armonización facial", "Hidratación o soporte de volumen", "Plan personalizado"],
+        generalCare: ["Evitar presión en la zona", "No exponerse a calor intenso", "Acudir a control si se indica"],
+        tag: "Inyectable"
+      },
+      {
+        name: "HIFU facial",
+        description:
+          "Tecnología estética no quirúrgica orientada a estimular la apariencia de firmeza en zonas faciales seleccionadas.",
+        potentialBenefits: ["Apoyo a firmeza facial", "Sesión planificada por zonas", "Alternativa no quirúrgica"],
+        generalCare: ["Mantener hidratación", "Usar protector solar", "Seguir rutina indicada"],
+        tag: "Tecnología"
+      },
+      {
+        name: "Hollywood Peel",
+        description:
+          "Tratamiento de renovación superficial asociado a láser Nd:YAG Q-Switched, orientado a mejorar luminosidad y textura.",
+        potentialBenefits: ["Apariencia más luminosa", "Apoyo a textura", "Renovación progresiva"],
+        generalCare: ["Fotoprotección diaria", "Evitar exfoliación agresiva", "No exponerse al sol directo"],
+        tag: "Láser"
+      },
+      {
+        name: "Tratamiento antiacneico",
+        description:
+          "Plan de cuidado facial orientado a acné y secuelas visibles, con evaluación del tipo de piel y hábitos actuales.",
+        potentialBenefits: ["Orientación para piel acneica", "Rutina de apoyo", "Acompañamiento de evolución"],
+        generalCare: ["No manipular lesiones", "Evitar automedicación", "Mantener limpieza e hidratación indicadas"],
+        tag: "Piel"
+      },
+      {
+        name: "Plasma rico en plaquetas",
+        description:
+          "Procedimiento estético de bioestimulación indicado tras revisión profesional y explicación del proceso.",
+        potentialBenefits: ["Apoyo a luminosidad", "Cuidado progresivo", "Plan por sesiones"],
+        generalCare: ["Evitar maquillaje inmediato", "Hidratar la piel", "Usar protector solar"],
+        tag: "Bioestimulación"
+      },
+      {
+        name: "Plasma rico en plaquetas con Dermapen",
+        description:
+          "Combinación estética orientada a favorecer textura y apariencia de la piel mediante microcanales y PRP.",
+        potentialBenefits: ["Apoyo a textura", "Estimulación progresiva", "Plan de sesiones orientativo"],
+        generalCare: ["Evitar sol directo", "No exfoliar la zona", "Seguir indicaciones de hidratación"],
+        tag: "Bioestimulación"
+      },
+      {
+        name: "Peeling facial (aclaramiento facial)",
+        description:
+          "Procedimiento de renovación superficial orientado a mejorar apariencia de manchas, textura y luminosidad.",
+        potentialBenefits: ["Apoyo a tono más uniforme", "Renovación gradual", "Rutina complementaria"],
+        generalCare: ["Protector solar estricto", "Evitar irritantes", "No retirar descamación manualmente"],
+        tag: "Renovación"
+      },
+      {
+        name: "Limpieza facial",
+        description:
+          "Higiene facial de mantenimiento para retirar impurezas y preparar la piel para una rutina adecuada.",
+        potentialBenefits: ["Sensación de piel fresca", "Apoyo a poros congestionados", "Base para rutina facial"],
+        generalCare: ["Hidratar la piel", "Usar protector solar", "Evitar exfoliación intensa por 48 horas"],
+        tag: "Higiene"
+      },
+      {
+        name: "Limpieza facial profunda",
+        description:
+          "Limpieza facial más completa, orientada a extracción controlada, higiene y cuidado de textura.",
+        potentialBenefits: ["Higiene más profunda", "Apoyo a puntos negros", "Mejor preparación de la piel"],
+        generalCare: ["No manipular la piel", "Evitar maquillaje inmediato", "Mantener hidratación"],
+        tag: "Higiene"
+      },
+      {
+        name: "Hidrofacial",
+        description:
+          "Tratamiento de higiene e hidratación facial orientado a mejorar sensación de frescura y luminosidad.",
+        potentialBenefits: ["Hidratación superficial", "Piel con aspecto fresco", "Sesión cómoda y progresiva"],
+        generalCare: ["Mantener fotoprotección", "Evitar exfoliación agresiva", "Usar productos indicados"],
+        tag: "Hidratación"
+      },
+      {
+        name: "Extracción de lunares y verrugas",
+        description:
+          "Valoración y procedimiento estético para lesiones visibles cuando el profesional considera viable tratar la zona.",
+        potentialBenefits: ["Revisión inicial", "Indicaciones de cuidado", "Acompañamiento de cicatrización"],
+        generalCare: ["No retirar costras", "Mantener zona limpia", "Asistir a control si se indica"],
+        tag: "Dermatológico"
+      },
+      {
+        name: "Baño lunar",
+        description:
+          "Tratamiento cosmético orientado a aclarar visualmente el vello fino de zonas seleccionadas.",
+        potentialBenefits: ["Acabado estético temporal", "Alternativa cosmética rápida", "Orientación por zona"],
+        generalCare: ["Evitar piel irritada", "Realizar prueba si corresponde", "Hidratar la zona"],
+        tag: "Cosmético"
+      },
+      {
+        name: "Lipoenzimas facial",
+        description:
+          "Tratamiento estético facial orientado a zonas localizadas, siempre sujeto a evaluación profesional.",
+        potentialBenefits: ["Plan facial por zonas", "Orientación personalizada", "Acompañamiento posterior"],
+        generalCare: ["Evitar calor intenso", "No manipular la zona", "Seguir indicaciones recibidas"],
+        tag: "Rostro"
+      },
+      {
+        name: "Mascarillas antiacneicas",
+        description:
+          "Cuidado complementario para piel con tendencia acneica, dentro de una rutina orientada por profesionales.",
+        potentialBenefits: ["Apoyo calmante", "Complemento de rutina", "Cuidado de piel grasa o acneica"],
+        generalCare: ["No mezclar activos sin orientación", "Mantener limpieza suave", "Usar protector solar"],
+        tag: "Cuidado"
+      },
+      {
+        name: "Venta de cremas faciales",
+        description:
+          "Productos faciales recomendados según tipo de piel, rutina actual y objetivo estético.",
+        potentialBenefits: ["Rutina personalizada", "Apoyo domiciliario", "Continuidad del tratamiento"],
+        generalCare: ["Usar según indicación", "Evitar automedicación cosmética", "Reportar irritación"],
+        tag: "Producto"
+      }
+    ]
+  },
+  {
+    id: "corporales",
+    eyebrow: "Tratamientos corporales",
+    title: "Contorno, bienestar estético y soporte corporal",
+    description:
+      "Opciones corporales y complementarias orientadas a objetivos estéticos, hábitos saludables, recuperación y cuidado continuo.",
+    image: "/tratamientos-corporales.svg",
+    treatments: [
+      {
+        name: "Aumento de glúteos con peptonas",
+        description:
+          "Tratamiento corporal estético orientado a tonificar, levantar y realzar la zona glútea según evaluación.",
+        potentialBenefits: ["Plan corporal por sesiones", "Orientación por objetivo", "Acompañamiento profesional"],
+        generalCare: ["Evaluación previa", "Evitar presión excesiva si se indica", "Seguir recomendaciones posteriores"],
+        tag: "Corporal"
+      },
+      {
+        name: "Criolipólisis",
+        description:
+          "Tecnología corporal orientada a grasa localizada mediante frío controlado, sujeta a valoración por zona.",
+        potentialBenefits: ["Alternativa no quirúrgica", "Enfoque en zonas localizadas", "Plan progresivo"],
+        generalCare: ["Hidratarse", "Complementar con hábitos saludables", "Acudir a control si se indica"],
+        tag: "Tecnología"
+      },
+      {
+        name: "Hidrolipoclasia",
+        description:
+          "Tratamiento corporal orientado a reducción de medidas en zonas específicas, con evaluación y cuidados indicados.",
+        potentialBenefits: ["Trabajo por zonas", "Plan de sesiones", "Orientación de medidas"],
+        generalCare: ["Hidratación constante", "Seguir indicaciones de actividad", "Evitar expectativas absolutas"],
+        tag: "Corporal"
+      },
+      {
+        name: "Vitaminas C endovenosa",
+        description:
+          "Aplicación endovenosa ofrecida como complemento de bienestar bajo evaluación y orientación profesional.",
+        potentialBenefits: ["Soporte complementario", "Orientación personalizada", "Plan según necesidad"],
+        generalCare: ["Informar antecedentes", "Evitar automedicación", "Seguir indicaciones del profesional"],
+        tag: "Bienestar"
+      },
+      {
+        name: "Pack cóctel de vida",
+        description:
+          "Combinación complementaria mencionada en el flyer con Vit. C, Cholo 2, Lymphdiaral y Pasconal, sujeta a evaluación.",
+        potentialBenefits: ["Orientación integral", "Plan complementario", "Aplicación bajo criterio profesional"],
+        generalCare: ["Informar alergias o antecedentes", "Confirmar componentes antes de aplicar", "No automedicarse"],
+        tag: "Bienestar"
+      },
+      {
+        name: "Slim Sculpt",
+        description:
+          "Programa corporal estético orientado a moldeamiento o apoyo de contorno según objetivos y valoración.",
+        potentialBenefits: ["Plan corporal personalizado", "Apoyo a contorno", "Acompañamiento por sesiones"],
+        generalCare: ["Mantener hidratación", "Complementar con hábitos saludables", "Seguir frecuencia indicada"],
+        tag: "Programa"
+      },
+      {
+        name: "Tratamientos post operatorios",
+        description:
+          "Cuidados complementarios después de procedimientos, orientados a recuperación estética bajo indicación profesional.",
+        potentialBenefits: ["Apoyo post procedimiento", "Orientación de cuidados", "Plan por etapa"],
+        generalCare: ["Seguir indicaciones médicas", "No realizar maniobras sin autorización", "Acudir a controles"],
+        tag: "Post cuidado"
+      },
+      {
+        name: "Tratamiento para estrías",
+        description:
+          "Opciones estéticas orientadas a mejorar apariencia de estrías mediante evaluación de zona, tipo y antigüedad.",
+        potentialBenefits: ["Mejora progresiva de apariencia", "Plan por zona", "Rutina complementaria"],
+        generalCare: ["Hidratar la piel", "Fotoprotección si la zona se expone", "Ser constante con el plan"],
+        tag: "Piel corporal"
+      },
+      {
+        name: "Venta de cremas corporales",
+        description:
+          "Productos corporales recomendados para hidratación, cuidado y mantenimiento según necesidad de piel.",
+        potentialBenefits: ["Apoyo domiciliario", "Rutina corporal", "Continuidad del cuidado"],
+        generalCare: ["Usar según indicación", "Evitar aplicar sobre piel irritada", "Consultar si hay reacción"],
+        tag: "Producto"
+      },
+      {
+        name: "Venta de productos post quirúrgicos",
+        description:
+          "Productos de apoyo para etapas posteriores a procedimientos, indicados según recomendación profesional.",
+        potentialBenefits: ["Soporte de recuperación", "Cuidado organizado", "Productos según etapa"],
+        generalCare: ["Usar solo si fue indicado", "Mantener higiene", "Consultar dudas antes de usar"],
+        tag: "Post cuidado"
+      },
+      {
+        name: "Fajas post quirúrgicas",
+        description:
+          "Prendas de soporte utilizadas en recuperación post procedimiento cuando el profesional lo recomienda.",
+        potentialBenefits: ["Soporte corporal", "Acompañamiento post procedimiento", "Uso según talla y etapa"],
+        generalCare: ["Elegir talla adecuada", "No usar sin indicación", "Mantener higiene de la prenda"],
+        tag: "Post cuidado"
+      }
+    ]
+  }
+];
+
+export const treatmentOptions = Array.from(
+  new Set([
+    ...flyerTreatmentSections.flatMap((section) => section.treatments.map((treatment) => treatment.name)),
+    ...treatments.map((treatment) => treatment.name)
+  ])
+);

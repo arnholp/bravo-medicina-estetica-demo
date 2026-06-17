@@ -102,12 +102,21 @@ src/constants/data.ts
 Desde ahi puedes editar:
 
 - Tratamientos
+- Catalogo por flyer: cirugias esteticas, faciales y corporales
 - Categorias
 - Testimonios simulados
 - Pagina de Miss Peru Puno
 - Textos de confianza
 - Imagenes placeholder
 - Datos de contacto
+
+Assets principales:
+
+- `public/bravo-flyer-tratamientos.jpg`
+- `public/tratamientos-cirugias.svg`
+- `public/tratamientos-faciales.svg`
+- `public/tratamientos-corporales.svg`
+- `public/miss-peru-puno-hero.png`
 
 ## Estructura principal
 

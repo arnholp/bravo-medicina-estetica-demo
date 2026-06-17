@@ -11,7 +11,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <span className="relative h-14 w-14 overflow-hidden rounded-full border border-gold/40 bg-white">
-              <Image src="/bravo-logo.jpg" alt="Logo Bravo Medicina Estética" fill sizes="56px" className="object-cover" />
+              <Image src={siteConfig.logo} alt="Logo Bravo Medicina Estética" fill sizes="56px" className="object-cover" />
             </span>
             <div>
               <p className="font-display text-2xl">{siteConfig.name}</p>
@@ -27,7 +27,7 @@ export function Footer() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-gold">Navegación</p>
           <div className="mt-4 grid gap-3">
-            {navItems.slice(0, 5).map((item) => (
+            {navItems.filter((item) => item.label !== "Admin").map((item) => (
               <Link key={item.href} href={item.href} className="text-sm text-cream/70 transition hover:text-white">
                 {item.label}
               </Link>

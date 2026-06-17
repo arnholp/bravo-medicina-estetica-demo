@@ -16,7 +16,7 @@ export function Navbar() {
       <nav className="container-shell flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Ir al inicio">
           <span className="relative h-12 w-12 overflow-hidden rounded-full border border-gold/40 bg-white shadow-soft">
-            <Image src="/bravo-logo.jpg" alt="Logo Bravo Medicina Estética" fill sizes="48px" className="object-cover" />
+            <Image src={siteConfig.logo} alt="Logo Bravo Medicina Estética" fill sizes="48px" className="object-cover" />
           </span>
           <span className="leading-tight">
             <span className="block font-display text-xl text-coffee">{siteConfig.name}</span>
@@ -26,7 +26,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}

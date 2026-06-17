@@ -13,6 +13,7 @@ import {
 export const siteConfig = {
   name: "Bravo Medicina Estética",
   logo: "/bravologo.png",
+  missPeruLogo: "/miss-peru-puno-logo.png",
   location: "Juliaca, Perú",
   phone: "51972657382",
   whatsappLabel: "+51 972 657 382",
@@ -27,10 +28,10 @@ export const siteConfig = {
 export const navItems = [
   { href: "/", label: "Inicio" },
   { href: "/tratamientos", label: "Tratamientos" },
-  { href: "/miss-peru-puno", label: "Miss Perú Puno" },
   { href: "/#quiz", label: "Quiz" },
   { href: "/#reserva", label: "Reserva" },
   { href: "/#seguimiento", label: "Seguimiento" },
+  { href: "/miss-peru-puno", label: "Miss Perú Puno" },
   { href: "/admin", label: "Admin" }
 ];
 

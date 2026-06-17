@@ -70,15 +70,35 @@ export default function MissPeruPunoPage() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="relative mx-auto aspect-square w-full max-w-lg overflow-hidden rounded-[2rem] border border-gold/30 bg-white/5 p-4 shadow-glow">
-              <Image
-                src={siteConfig.logo}
-                alt="Logo Bravo Medicina Estética"
-                fill
-                priority
-                sizes="(min-width: 1024px) 42vw, 90vw"
-                className="object-cover"
-              />
+            <div className="mx-auto w-full max-w-xl rounded-[2rem] border border-gold/30 bg-white/5 p-4 shadow-glow backdrop-blur">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-gold/20 bg-black">
+                <Image
+                  src={siteConfig.missPeruLogo}
+                  alt="Logo Miss Perú Puno"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 42vw, 90vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="mt-4 grid gap-3 rounded-[1.5rem] border border-white/10 bg-coffee/70 p-4 sm:grid-cols-[80px_1fr] sm:items-center">
+                <div className="relative h-20 w-20 overflow-hidden rounded-2xl border border-gold/30 bg-white/10">
+                  <Image
+                    src={siteConfig.logo}
+                    alt="Logo Bravo Medicina Estética"
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-gold">Auspiciador</p>
+                  <p className="mt-1 text-sm leading-6 text-cream/75">
+                    Bravo Medicina Estética acompaña esta plataforma regional con una comunicación de cuidado,
+                    imagen y orientación profesional.
+                  </p>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>

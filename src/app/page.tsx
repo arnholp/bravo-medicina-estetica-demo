@@ -41,33 +41,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-coffee py-12 text-cream">
-        <div className="container-shell grid gap-8 md:grid-cols-[auto_1fr_auto] md:items-center">
-          <div className="relative h-24 w-24 overflow-hidden rounded-3xl border border-gold/30 bg-white/10">
-            <Image src={siteConfig.logo} alt="Logo Bravo Medicina Estética" fill sizes="96px" className="object-cover" />
-          </div>
-          <div>
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-gold">
-              <Crown className="h-4 w-4" />
-              Auspicio regional
-            </div>
-            <h2 className="mt-3 font-display text-3xl leading-tight text-white sm:text-4xl">
-              Bravo Medicina Estética, auspiciador de Miss Perú Puno
-            </h2>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-cream/70">
-              Una alianza de imagen, confianza y cuidado estético responsable en la región.
-            </p>
-          </div>
-          <Link
-            href="/miss-peru-puno"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold text-coffee transition hover:bg-cream"
-          >
-            Ver página
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </section>
-
       <section className="section-pad bg-white">
         <div className="container-shell">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -210,6 +183,39 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-coffee py-12 text-cream">
+        <div className="container-shell grid gap-8 md:grid-cols-[180px_1fr_auto] md:items-center">
+          <div className="relative aspect-[4/3] w-full max-w-44 overflow-hidden rounded-3xl border border-gold/30 bg-black">
+            <Image
+              src={siteConfig.missPeruLogo}
+              alt="Logo Miss Perú Puno"
+              fill
+              sizes="180px"
+              className="object-cover"
+            />
+          </div>
+          <div>
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.24em] text-gold">
+              <Crown className="h-4 w-4" />
+              Auspicio regional
+            </div>
+            <h2 className="mt-3 font-display text-3xl leading-tight text-white sm:text-4xl">
+              Bravo Medicina Estética, auspiciador de Miss Perú Puno
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-cream/70">
+              Una alianza de imagen, confianza y cuidado estético responsable en la región.
+            </p>
+          </div>
+          <Link
+            href="/miss-peru-puno"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 text-sm font-bold text-coffee transition hover:bg-cream"
+          >
+            Ver página
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
 
